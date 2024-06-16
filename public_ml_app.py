@@ -6,10 +6,10 @@ from PIL import Image
 diabetes_model = pickle.load(open('trained_model.sav', 'rb'))
 heart_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
-migrane_model = pickle.load(open('migraine_model.sav', 'rb'))
-lungs_model = pickle.load(open('lung_disease_classifier.sav', 'rb'))
+migraine_model = pickle.load(open('migraine_model.sav', 'rb'))
+lungs_model= pickle.load(open('lung_disease_classifier.sav', 'rb'))
 obesity_model = pickle.load(open('rf_model.sav', 'rb'))
-covid_model = pickle.load(open('covid_model.sav', 'rb'))
+covid19_model = pickle.load(open('covid_model.sav', 'rb'))
 
 # Styling for 3D containers
 st.markdown("""
