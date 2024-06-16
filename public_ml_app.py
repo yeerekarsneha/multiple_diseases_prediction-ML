@@ -302,9 +302,6 @@ if st.session_state.page == 'Migraine Prediction':
 
 
 # Lung Disease Prediction Page
-      if 'page' not in st.session_state:
-    st.session_state['page'] = 'Lung Disease Prediction'
-
 if st.session_state['page'] == 'Lung Disease Prediction':
     st.title('Lung Disease Prediction using ML')
     st.image('https://pulmonarypracticeassociates.com/wp-content/uploads/2018/11/Services-LungDisease-img.jpg')  # Replace with an actual URL
