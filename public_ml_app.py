@@ -332,7 +332,6 @@ if st.session_state['page'] == 'Lung Disease Prediction':
         # Predict using the model
         lung_prediction = lungs_model.predict([[age, smoking_history, shortness_of_breath, chest_pain, cough, fatigue, fever, weight_loss]])
 
-        # Map the prediction to disease names (this is just an example, adjust according to your model)
         diseases = {
             0: 'No Lung Disease',
             1: 'Chronic Obstructive Pulmonary Disease (COPD)',
@@ -345,7 +344,6 @@ if st.session_state['page'] == 'Lung Disease Prediction':
             8:'Pulmonary_Fibrosis',
             9:'Pleural_Effusion',
             10:'Tuberculosis'
-            # Add other mappings as per your model
         }
 
         predicted_disease = diseases.get(lung_prediction[0], 'Unknown Disease')
