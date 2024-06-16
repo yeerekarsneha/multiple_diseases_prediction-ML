@@ -3,13 +3,13 @@ import streamlit as st
 from PIL import Image
 
 # Loading the saved models
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/trained_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/heart_disease_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/parkinsons_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/migraine_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/lung_disease_classifier.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/rf_model.sav', 'rb'))
-loaded_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/covid_model.sav', 'rb'))
+daibetes_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/trained_model.sav', 'rb'))
+heart_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/heart_disease_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/parkinsons_model.sav', 'rb'))
+migrane_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/migraine_model.sav', 'rb'))
+lung_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/lung_disease_classifier.sav', 'rb'))
+obesity_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/rf_model.sav', 'rb'))
+covid_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/covid_model.sav', 'rb'))
 
 # Styling for 3D containers
 st.markdown("""
