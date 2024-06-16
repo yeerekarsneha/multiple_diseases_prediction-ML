@@ -330,7 +330,6 @@ if st.session_state['page'] == 'Lung Disease Prediction':
     lung_diagnosis = ''
     if st.button('Lung Disease Test Result'):
         # Predict using the model
-        try:
             features = np.array([[age, smoking_history, shortness_of_breath, chest_pain, cough, fatigue, fever, weight_loss]])
             lung_prediction = lungs_model.predict(features)
 
@@ -351,10 +350,7 @@ if st.session_state['page'] == 'Lung Disease Prediction':
             predicted_disease = diseases.get(lung_prediction[0], 'Unknown Disease')
             lung_diagnosis = f'The person is predicted to have: {predicted_disease}'
             st.success(lung_diagnosis)
-        except Exception as e:
-            st.error(f"An error occurred: {e}")
-
-
+      
 # Obesity Prediction Page
 if st.session_state.page == 'Obesity Prediction':
     st.title('Obesity Prediction using ML')
