@@ -300,8 +300,8 @@ if st.session_state.page == 'Migraine Prediction':
             migraine_diagnosis = 'The person does not have migraines'
         st.success(migraine_diagnosis)
 
-# Lung Disease Prediction Page
 
+# Lung Disease Prediction Page
 if 'page' not in st.session_state:
     st.session_state['page'] = 'Lung Disease Prediction'
 
@@ -330,25 +330,30 @@ if st.session_state['page'] == 'Lung Disease Prediction':
     lung_diagnosis = ''
     if st.button('Lung Disease Test Result'):
         # Predict using the model
-        lung_prediction = lungs_model.predict([[age, smoking_history, shortness_of_breath, chest_pain, cough, fatigue, fever, weight_loss]])
+        try:
+            features = np.array([[age, smoking_history, shortness_of_breath, chest_pain, cough, fatigue, fever, weight_loss]])
+            lung_prediction = lungs_model.predict(features)
 
-        diseases = {
-            0: 'No Lung Disease',
-            1: 'Chronic Obstructive Pulmonary Disease (COPD)',
-            2: 'Lung Cancer',
-            3: 'Pneumonia',
-            4:'Pulmonary_Embolism',
-            5:'Asthma',
-            6:'Bronchitis',
-            7:'Emphysema',
-            8:'Pulmonary_Fibrosis',
-            9:'Pleural_Effusion',
-            10:'Tuberculosis'
-        }
+            diseases = {
+                0: 'No Lung Disease',
+                1: 'Chronic Obstructive Pulmonary Disease (COPD)',
+                2: 'Lung Cancer',
+                3: 'Pneumonia',
+                4: 'Pulmonary Embolism',
+                5: 'Asthma',
+                6: 'Bronchitis',
+                7: 'Emphysema',
+                8: 'Pulmonary Fibrosis',
+                9: 'Pleural Effusion',
+                10: 'Tuberculosis'
+            }
 
-        predicted_disease = diseases.get(lung_prediction[0], 'Unknown Disease')
-        lung_diagnosis = f'The person is predicted to have: {predicted_disease}'
-        st.success(lung_diagnosis)
+            predicted_disease = diseases.get(lung_prediction[0], 'Unknown Disease')
+            lung_diagnosis = f'The person is predicted to have: {predicted_disease}'
+            st.success(lung_diagnosis)
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
+
 
 # Obesity Prediction Page
 if st.session_state.page == 'Obesity Prediction':
