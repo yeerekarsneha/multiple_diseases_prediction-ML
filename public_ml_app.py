@@ -208,7 +208,7 @@ if st.session_state.page == 'Heart Disease Prediction':
 
     heart_diagnosis = ''
     if st.button('Heart Disease Test Result'):
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
+        heart_prediction = heart_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
         if heart_prediction[0] == 1:
             heart_diagnosis = 'The person is having heart disease'
         else:
