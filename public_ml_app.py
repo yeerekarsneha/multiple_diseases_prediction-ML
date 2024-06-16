@@ -4,12 +4,12 @@ from PIL import Image
 
 # Loading the saved models
 daibetes_model = pickle.load(open('trained_model.sav', 'rb'))
-heart_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/heart_disease_model.sav', 'rb'))
-parkinsons_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/parkinsons_model.sav', 'rb'))
-migrane_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/migraine_model.sav', 'rb'))
-lung_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/lung_disease_classifier.sav', 'rb'))
-obesity_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/rf_model.sav', 'rb'))
-covid_model = pickle.load(open('C:/Users/heera/OneDrive/Desktop/python-ws/covid_model.sav', 'rb'))
+heart_model = pickle.load(open('heart_disease_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
+migrane_model = pickle.load(open('migraine_model.sav', 'rb'))
+lung_model = pickle.load(open('lung_disease_classifier.sav', 'rb'))
+obesity_model = pickle.load(open('rf_model.sav', 'rb'))
+covid_model = pickle.load(open('covid_model.sav', 'rb'))
 
 # Styling for 3D containers
 st.markdown("""
