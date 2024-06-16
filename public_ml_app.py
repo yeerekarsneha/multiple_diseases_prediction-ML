@@ -391,7 +391,7 @@ if st.session_state.page == 'COVID-19 Prediction':
         cough = st.slider('Cough')
 
     with col3:
-       Fatigue = st.slider('Fatigue')
+        fatigue = st.slider('Fatigue')
     with col1:
         loss_of_taste_smell = st.slider('Loss of Taste or Smell')
 
